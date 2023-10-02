@@ -1,0 +1,7 @@
+
+
+# This code takes user input and prints it out
+
+user_input = input("Please enter your input: ")
+
+print("You entered: " + user_input)

@@ -1,0 +1,32 @@
+
+
+import React, { Component } from "react";
+
+class AICard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cardData: {
+        color: '',
+        size: '',
+        text: '',
+        image: ''
+      }
+    }
+  }
+
+  render() {
+    const { cardData } = this.state;
+    return (
+      <div className="AICard" style={{
+        backgroundColor: cardData.color,
+        width: cardData.size,
+        height: cardData.size
+      }}>
+        {cardData.image ? <img src={cardData.image} alt={cardData.text} /> : cardData.text}
+      </div>
+    );
+  }
+}
+
+export default AICard;
